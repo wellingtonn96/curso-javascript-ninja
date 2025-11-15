@@ -4,15 +4,26 @@ Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 */
 // ?
 
+const randomArray = [1, 8];
+
+
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
 // ?
 
+function returnArray(arr) {
+    return arr;
+}
+
+console.log(returnArray(randomArray));
+
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
 // ?
+
+console.log(returnArray(randomArray))
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -22,10 +33,16 @@ segundo parâmetro.
 */
 // ?
 
+function getArrayValuesAtIndex(array, index) {
+    return array[index];
+}
+
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
 // ?
+
+console.log(getArrayValuesAtIndex(randomArray, 1));
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
