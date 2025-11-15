@@ -4,6 +4,16 @@
   */
   // ?
 
+  const person1 = {
+      name: 'John',
+      lastName: 'Doe'
+  };
+
+  const person2 = {
+      name: 'Jane',
+      lastName: 'Smith'
+  };
+
   /*
   Agora crie uma função chamada `getFullName` que retorne as propriedades
   `name` e `lastName` dos objetos acima, formando um nome completo.
@@ -15,8 +25,17 @@
   pessoas que foram criadas anteriormente, passando as pessoas acima como
   contexto da função. Use um console.log por pessoa.
   */
+
+  function getFullName(param) {
+      return `${param.name} ${param.lastName}`;
+  }
+
+
+
   console.log( 'O nome das pessoas é:' );
   // ?
+
+  console.log(getFullName(person1));
 
   /*
   Crie uma função chamada `sum`. Essa função pode receber uma lista de
@@ -26,6 +45,17 @@
   os parâmetros passados para essa função.
   */
   // ?
+
+
+  function sum(...args) {
+      console.log(args);
+      return args.reduce((acc, num) => acc + num, 0);
+  }
+
+  console.log( '\nSomar alguns números:' );
+  // ?
+
+  console.log(sum(1, 2, 3));
 
   /*
   Mostre no console que a função acima funciona, invocando-a em 3 console.log
@@ -40,6 +70,8 @@
   "Entre com alguns números que serão somados:"
   */
   // ?
+
+
 
   /*
   Mostre no console o valor entrado pelo usuário:

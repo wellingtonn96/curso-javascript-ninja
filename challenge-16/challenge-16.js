@@ -1,3 +1,4 @@
+(() => {
 /*
 1. Envolva todo o conteúdo desse desafio em uma IIFE.
 2. Adicione a diretiva 'use strict';
@@ -16,6 +17,11 @@ E assim por diante, até a última.
 console.log( 'As letras do seu nome:' );
 // ?
 
+let name = 'Wellington';
+for (let i=0; i < name.length; i++) {
+    console.log(`${name[i]} é a ${i + 1}ª letra do meu nome.`);
+}
+
 /*
 - Declare uma variável chamada `fullName`, que receba seu nome completo,
 escrito no formato de slug (caixa baixa e palavras separadas por um traço).
@@ -31,6 +37,20 @@ console.log para cada formato.
 console.log( '\nNome convertido à partir de um slug:' );
 // ?
 
+let fullName = 'wellington-santos-de-souza';
+
+let fullNameSpace = fullName.replaceAll('-', ' ')
+
+
+let names = fullNameSpace.split(' ')
+
+for (let i = 0; i < names.length; i++) {
+    names[i] = names[i][0].toUpperCase() + names[i].slice(1);
+}
+
+console.log(names.join(' '));
+
+
 /*
 - Crie um array com 5 nomes. Reduza esses nomes a uma única string, separando
 cada nome por vírgula. Entre o penúltimo e o último nome, o separador deve
@@ -42,6 +62,16 @@ O resultado final deve ficar mais ou menos assim:
 */
 console.log( '\nMeus amigos:' );
 // ?
+
+const friends = ['Ana', 'Bia', 'Carlos', 'Daniel', 'Eduardo'];
+
+
+const friendsString = friends.reduce((acc, friend, index) => {
+    return friends.length - 1 === index ? (acc + `e ${friend} são meus amigos.`) : (acc + `${friend}, `);
+}, '')
+
+console.log(friendsString);
+
 
 /*
 Usando o replace(), faça a string "Roberto" virar "Roberta".
@@ -57,6 +87,9 @@ faz a busca do final para o início da string.
 console.log( '\nParte de uma string:' );
 // ?
 
+const fernando = 'Fernando';
+console.log(fernando.slice(fernando.length - 5));
+
 /*
 Declare uma variável chamada `myName`, que receba o seu primeiro nome,
 escrito de forma natural.
@@ -66,5 +99,15 @@ e minúsculas.
 de qualquer tamanho, escrito de qualquer forma.
 Ex.: Nomes que deveriam funcionar: "Fernando", "RoBertO", "gabriEla", etc.
 */
+
+let myName = 'Wellington';
+
+for (let i = 0; i < myName.length; i++) {
+   i % 2 === 0 ? myName[i] = myName[i].toUpperCase() : myName[i] = myName[i].toLowerCase();  
+}
+
+console.log(myName[5] ='1');
+
 console.log( '\nNome com letras intercaladas entre caixa alta e baixa:' );
 // ?
+})();
